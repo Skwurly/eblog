@@ -1,0 +1,52 @@
+<!--- jinja tags : ) --->
+{% load static %}
+<html>
+<head>
+  <title>Earl's Blog</title>
+  <link rel="stylesheet" href='{% static 'blog/style.css' %}'/>
+  <link rel="shortcut icon" href="{% static '/img/eg.png'%}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+<!---  HEADER-->
+  <div class=header>
+<h1><a href='{% url 'index' %}'>Earl's blog</a></h1>
+
+<!--- ADMIN BUTTONS 'add post and logout' --->
+</div>
+
+<div class=linkbar>
+  <a href='https://github.com/urlybyrd'><img class="icon" src='{% static 'img/git.png'%}' /></a>
+  <a href='https://twitter.com/Earl_Goodfellow'><img class="icon" src='{% static 'img/twitter.png'%}' /></a>
+  <a href=''><img class="icon" src='{% static 'img/about.png'%}' /></a>
+</div>
+
+
+
+<div class=admin>
+{% if user.is_authenticated %}
+  <a href='{% url 'logout' %}'>logout</a>
+
+  <h3><a href='{% url 'addpost' %}'>addpost</a></h3>
+  {% endif %}
+</div>
+
+<!--content-->
+
+<div class=content>
+
+  {% block content %}
+  {% endblock %}
+</div>
+
+
+<!--footer-->
+<div class=footer>
+earlshart@gmail.com
+
+</div>
+
+</body>
+</html>

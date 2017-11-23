@@ -1,0 +1,72 @@
+*{
+  margin:0px;
+
+}
+
+body{
+  background-color: grey;
+}
+
+div.header{
+  background-color: black;
+  width:100%;
+  position: fixed;
+
+  height: 50px;
+  z-index:150;
+}
+
+div.linkbar{
+  right:10px;
+  position: fixed;
+  top: 5px;
+  z-index: 150;
+display:
+
+}
+img.icon{
+  width:37px;
+}
+
+div.footer{
+  background-color: black;
+  color:white;
+  width:100%;
+  bottom:0px;
+  position: fixed;
+  height: 30px;
+
+}
+
+div.content{
+  top:80px;
+  position: absolute;
+  width: 90%;
+  display: inline;
+
+  margin-left: 5%;
+  margin-right:auto;
+  min-height: 50%;
+}
+
+div.post_container{
+  margin:20px;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+
+div.post{
+  margin:20px;
+
+}
+div.admin{
+  position: fixed;
+  right:20px;
+  bottom: 50px;
+  z-index: 100;
+}
+
+div.comments_container{
+
+}
